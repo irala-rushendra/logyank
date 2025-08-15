@@ -1,0 +1,4 @@
+cd ~/path/to/logyank/src
+g++ -std=c++17 main.cpp journalModule.cpp -o ~/.local/bin/logyank
+logyank   # runs the new version instantly
+
