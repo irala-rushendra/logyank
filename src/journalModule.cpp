@@ -6,7 +6,7 @@
 
 namespace journalModule{
   void showErrors(int lastN){
-    std::string cmd = "journalctl -p err --no-pager -n" + std::to_string(lastN);
+    std::string cmd = "journalctl -p err --no-pager -n " + std::to_string(lastN);
 
     FILE* pipe = popen(cmd.c_str(),"r");
     if(!pipe){
@@ -27,6 +27,7 @@ namespace journalModule{
       std::cout << line;
     }
   }
+  //void analyzeBruteforce(int thrld)
   
 }
 
