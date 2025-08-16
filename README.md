@@ -15,9 +15,15 @@ logyank
 
 # Show the last 100 error logs
 logyank 100
+
+#if ~/.local/bin is not in the PATH
+echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
+source ~/.bashrc
+
 # Compile and install to ~/.local/bin
 g++ -std=c++17 main.cpp journalModule.cpp -o ~/.local/bin/logyank
 chmod +x ~/.local/bin/logyank
+
 
 src/
  ├── main.cpp
